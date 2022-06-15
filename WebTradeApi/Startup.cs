@@ -51,11 +51,8 @@ namespace WebTrade
             });
 
             // Add seed data
-            //var scope = app.ApplicationServices.CreateScope();
             var context = app.ApplicationServices.GetService<TradeContext>();
-            //AddTestData(context);
             SeedData.AddTestData(context);
         }
-
     }
 }

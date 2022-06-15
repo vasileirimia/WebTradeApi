@@ -31,11 +31,19 @@ namespace WebTradeApi.Persistece.Repository
         {
             await _context.Trades.AddAsync(trade);
 
+            // If HolderName exists - append new trade to portofolio
             var portofolio = await _context.Portofolios.SingleOrDefaultAsync(p => p.HolderName == trade.TradeBuyer).ConfigureAwait(false);
-
             if (portofolio != null)
             {
                 trade.Portofolio = portofolio;
+            }
+
+            // If MarketUpdate not exists - append newly MarketUpdate to existing list
+            var securityCode = await _context.MarketUpdates.SingleOrDefaultAsync(m => m.SecurityCode == trade.SecurityCode).ConfigureAwait(false);
+            if (securityCode == null)
+            {
+                var newMarketUpdate = new MarketDb { SecurityCode = trade.SecurityCode, MarketPrice = trade.TradePrice };
+                _context.MarketUpdates.Add(newMarketUpdate);
             }
 
             await _context.SaveChangesAsync();
