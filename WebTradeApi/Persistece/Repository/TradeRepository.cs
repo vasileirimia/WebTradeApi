@@ -37,6 +37,14 @@ namespace WebTradeApi.Persistece.Repository
             {
                 trade.Portofolio = portofolio;
             }
+            else
+            {
+                // create new portofolio
+                var newPortofolio = new PortofolioDb() { HolderName = trade.TradeBuyer };
+                newPortofolio.Trades = new List<TradeDb>();
+                newPortofolio.Trades.Add(trade);
+                _context.Portofolios.Add(newPortofolio);
+            }
 
             // If MarketUpdate not exists - append newly MarketUpdate to existing list
             var securityCode = await _context.MarketUpdates.SingleOrDefaultAsync(m => m.SecurityCode == trade.SecurityCode).ConfigureAwait(false);
