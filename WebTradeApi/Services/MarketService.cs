@@ -19,6 +19,7 @@ namespace WebTradeApi.Services
             _mapper = mapper;
         }
 
+        /// <inheritdoc />
         public async Task UpdatePriceAsync(Market market, CancellationToken cancellationToken)
         {
             var marketUpdate = _mapper.Map<MarketDb>(market);

@@ -19,6 +19,7 @@ namespace WebTradeApi.Controllers
 
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetPortofoliosAsync(CancellationToken cancellationToken)
         {
             var portofolios = await _portofolioService.GetPortofoliosAsync(cancellationToken).ConfigureAwait(false);

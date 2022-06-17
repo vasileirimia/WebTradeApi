@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Threading;
 using System.Threading.Tasks;
 using WebTradeApi.Models;
@@ -21,6 +20,7 @@ namespace WebTradeApi.Controllers
 
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> GetTradesAsync([FromQuery] string name, CancellationToken cancellationToken)
         {
             var trades = await _tradeService.GetTradesAsync(name, cancellationToken).ConfigureAwait(false);

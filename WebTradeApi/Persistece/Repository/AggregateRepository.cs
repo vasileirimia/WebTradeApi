@@ -6,6 +6,7 @@ namespace WebTradeApi.Persistece.Repository
 {
     public class AggregateRepository : IAggregateRepository
     {
+        /// <inheritdoc />
         public async Task<PortofolioDb> BuildPortofolio(PortofolioDb portofolioDb, DbSet<MarketDb> marketUpdates)
         {
             double tradePriceSum = 0.0;

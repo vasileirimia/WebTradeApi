@@ -18,6 +18,7 @@ namespace WebTradeApi.Persistece.Repository
             _aggregatedValuesRepository = aggregatedValuesRepository;
         }
 
+        /// <inheritdoc />
         public async Task<IList<TradeDb>> GetTradesAsync(string name, CancellationToken cancellationToken)
         {
             var trades = string.IsNullOrEmpty(name) ?
@@ -27,6 +28,7 @@ namespace WebTradeApi.Persistece.Repository
             return trades;
         }
 
+        /// <inheritdoc />
         public async Task AddTradeAsync(TradeDb trade, CancellationToken cancellationToken)
         {
             await _context.Trades.AddAsync(trade);
@@ -57,6 +59,7 @@ namespace WebTradeApi.Persistece.Repository
             await _context.SaveChangesAsync();
         }
 
+        /// <inheritdoc />
         public async Task DeleteTradeAsync(int tradeId, CancellationToken cancellationToken)
         {
             var trade = await _context.Trades.SingleOrDefaultAsync(p => p.TradeId == tradeId).ConfigureAwait(false);

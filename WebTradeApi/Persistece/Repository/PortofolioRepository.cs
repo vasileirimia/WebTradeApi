@@ -19,6 +19,7 @@ namespace WebTradeApi.Persistece.Repository
             _aggregateRepository = aggregatedValuesRepository;
         }
 
+        /// <inheritdoc />
         public async Task<IList<PortofolioDb>> GetPortofoliosAsync(CancellationToken cancellationToken)
         {
             var portofolios = _context.Portofolios.ForEachAsync(p =>

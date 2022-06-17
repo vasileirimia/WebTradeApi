@@ -19,6 +19,7 @@ namespace WebTradeApi.Services
             _mapper = mapper;
         }
 
+        /// <inheritdoc />
         public async Task<IList<Portofolio>> GetPortofoliosAsync(CancellationToken cancellationToken)
         {
             var portofoliosDb = await _portofolioRepository.GetPortofoliosAsync(cancellationToken).ConfigureAwait(false);
