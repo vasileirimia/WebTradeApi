@@ -31,3 +31,4 @@
 - solution can be improved but requires more time
 - more unit tests could be added (integration tests for add, update actions)
 - Performance - caching
+- Deployment
