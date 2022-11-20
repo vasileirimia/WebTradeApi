@@ -9552,11 +9552,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Vasile\\Razor\\App\\WebTradeApiTests\\WebTradeApiTests.csproj",
+      "projectUniqueName": "D:\\Vasile\\Razor\\Repo\\WebTrade\\WebTradeApiTests\\WebTradeApiTests.csproj",
       "projectName": "WebTradeApiTests",
-      "projectPath": "D:\\Vasile\\Razor\\App\\WebTradeApiTests\\WebTradeApiTests.csproj",
+      "projectPath": "D:\\Vasile\\Razor\\Repo\\WebTrade\\WebTradeApiTests\\WebTradeApiTests.csproj",
       "packagesPath": "C:\\Users\\Vasile.Irimia\\.nuget\\packages\\",
-      "outputPath": "D:\\Vasile\\Razor\\App\\WebTradeApiTests\\obj\\",
+      "outputPath": "D:\\Vasile\\Razor\\Repo\\WebTrade\\WebTradeApiTests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Vasile.Irimia\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -9573,8 +9573,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\Vasile\\Razor\\App\\WebTradeApi\\WebTradeApi.csproj": {
-              "projectPath": "D:\\Vasile\\Razor\\App\\WebTradeApi\\WebTradeApi.csproj"
+            "D:\\Vasile\\Razor\\Repo\\WebTrade\\WebTradeApi\\WebTradeApi.csproj": {
+              "projectPath": "D:\\Vasile\\Razor\\Repo\\WebTrade\\WebTradeApi\\WebTradeApi.csproj"
             }
           }
         }
